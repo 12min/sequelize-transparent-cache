@@ -1,7 +1,7 @@
 module.exports = {
-  testEnvironment: "node",
+  testEnvironment: 'node',
   collectCoverage: process.env.CI !== undefined,
   coveragePathIgnorePatterns: [
-    "__test__"
+    '__test__'
   ]
 }
