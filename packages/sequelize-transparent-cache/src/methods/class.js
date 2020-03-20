@@ -66,6 +66,12 @@ function buildManualMethods (client, model, customKey) {
     },
     clear () {
       return cache.clearKey(client, model, customKey)
+    },
+    create () {
+      return model.create.apply(model, arguments)
+        .then(instance => {
+          return cache.save(client, instance, customKey)
+        })
     }
   }
 }

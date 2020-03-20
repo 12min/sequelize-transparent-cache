@@ -64,6 +64,14 @@ describe('Class methods', () => {
     expect((await Group.cache().findByPk(1)).get()).toEqual(
       group.get()
     )
+
+    const benjamin = await User.cache('user-10').create({
+      id: 10,
+      name: 'Benjamin'
+    })
+    expect(cacheStore.User['user-10']).toEqual(
+      JSON.stringify(benjamin)
+    )
   })
 
   test('Upsert', async () => {
