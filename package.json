@@ -2,9 +2,9 @@
 	"private": true,
 	"scripts": {
 		"postinstall": "lerna bootstrap",
-		"test": "jest --config jest.json",
+		"test": "jest",
 		"lint": "eslint .",
-		"posttest": "codecov"
+		"posttest": "test -z $CI || codecov"
 	},
 	"devDependencies": {
 		"codecov": "^3.6.1",
