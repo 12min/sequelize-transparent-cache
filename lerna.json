@@ -8,5 +8,5 @@
     }
   },
   "version": "2.2.3",
-  "npmClient": "yarn"
+  "npmClient": "npm"
 }
